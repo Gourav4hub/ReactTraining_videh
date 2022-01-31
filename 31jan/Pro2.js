@@ -1,12 +1,5 @@
-function fun1()
-{
-    console.log('Good Morning Everyone !') 
-}
+var data = require('./code2')
 
-function hello(ob)
-{
-    console.log('Hello All !')
-    ob()
-}
-
-hello(fun1)
+data.fun()
+console.log(data.arr)
+console.log(data.obj)
