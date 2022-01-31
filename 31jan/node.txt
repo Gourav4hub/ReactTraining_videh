@@ -1,0 +1,7 @@
+JavaScript : Client-Side Scripting Language.
+
+Google Chrome Browser + V8 Engine (Execution Environment Javascript)
+
+V8Engine(C / C++) + (Custom C / C++)
+
+NodeJS is a Upgraded version of V8Engine.
