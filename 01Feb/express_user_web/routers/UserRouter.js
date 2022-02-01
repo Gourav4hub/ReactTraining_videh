@@ -25,7 +25,10 @@ router.post("/list",(request,response)=>
 })
 router.post("/get",(request,response)=>
 {
-    
+    var email = request.body.email
+    userModel.getUser(email,record=>{
+        response.json(record)
+    })
 })
 
 

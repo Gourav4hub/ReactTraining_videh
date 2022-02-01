@@ -36,6 +36,21 @@ class UserModel
             })
         });
     }
+
+    getUser(email,callback)
+    {
+        var client = dbClient()
+        client.connect(err => 
+        {
+            const collection = client.db("userdb").collection("user");
+            collection.find({email:email}).toArray((err,records)=>{
+                if(err)
+                    callback([])
+                else
+                    callback(records)    
+            })
+        });
+    }
 }
 
 module.exports = new UserModel()
