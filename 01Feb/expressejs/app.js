@@ -1,8 +1,11 @@
 const express = require('express')
-
+const msgRouter = require('./routers/MessageRouter')
 const server = express()
 
 server.set('view engine','ejs')
+server.use(express.urlencoded()) // Fetch Post data
+server.use(express.json()) // Fetch JSON Data
+
 
 server.get("/",(request,response)=>
 {
@@ -24,6 +27,8 @@ server.get("/about",(request,response)=>{
 server.get("/contact",(request,response)=>{
     response.render('contact')
 })
+
+server.use("/message",msgRouter)
 
 server.listen(8989,()=>{
     console.log("http://localhost:8989")

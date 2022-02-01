@@ -8,5 +8,22 @@
         <a href='/about'><b>About</b></a> &nbsp;
         <a href='/contact'><b>Contact</b></a> &nbsp;
         <hr>
+        <h2>GET Request</h2>
+        <form method="get" action="/message/save1">
+            <input type="text" placeholder="Name" name="username" required/>
+            <br><br>
+            <textarea placeholder="Message" name='msg' required></textarea>
+            <br><br>
+            <button type='submit'>Send</button>
+        </form>
+
+        <h2>POST Request</h2>
+        <form method="post" action="/message/save2">
+            <input type="text" placeholder="Name" name="username" required/>
+            <br><br>
+            <textarea placeholder="Message" name='msg' required></textarea>
+            <br><br>
+            <button type='submit'>Send</button>
+        </form>
     </body>
 </html>
