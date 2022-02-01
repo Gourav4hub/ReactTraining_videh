@@ -15,19 +15,32 @@ router.post("/register",(request,response)=>
 
 router.post("/login",(request,response)=>
 {
-    
+    var email = request.body.email
+    var password = request.body.password
+    userModel.loginUser(email,password,record=>{
+        if(record)
+            response.json({status:true,data:record})
+        else
+            response.json({status:false})    
+    }) 
 })
 router.post("/list",(request,response)=>
 {
     userModel.listUsers(records=>{
-        response.json(records)
+        if(records)
+            response.json({status:true,data:records})
+        else
+            response.json({status:false}) 
     })
 })
 router.post("/get",(request,response)=>
 {
     var email = request.body.email
     userModel.getUser(email,record=>{
-        response.json(record)
+        if(record)
+            response.json({status:true,data:record})
+        else
+            response.json({status:false})    
     })
 })
 
