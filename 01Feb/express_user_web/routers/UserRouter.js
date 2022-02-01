@@ -5,9 +5,9 @@ const router = express.Router()
 router.post("/register",(request,response)=>
 {
     console.log(request.body)
-    userModel.registerUser(request.body,(status)=>{
-        if(status)
-            response.json({status:true,msg:"Registeration Done"})
+    userModel.registerUser(request.body,(result)=>{
+        if(result)
+            response.json({status:true,msg:"Registeration Done",data:result})
         else
             response.json({status:false,msg:"Registeration Failed"})    
     })
@@ -19,7 +19,9 @@ router.post("/login",(request,response)=>
 })
 router.post("/list",(request,response)=>
 {
-    
+    userModel.listUsers(records=>{
+        response.json(records)
+    })
 })
 router.post("/get",(request,response)=>
 {
