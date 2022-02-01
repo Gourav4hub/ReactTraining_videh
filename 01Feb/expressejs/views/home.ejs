@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Express Web</title>
+        <script>
+           // alert('helllo !')
+        </script>
+    </head>
+    <body>
+        <h1>Home Page</h1>
+        <a href='/'><b>Home</b></a> &nbsp;
+        <a href='/about'><b>About</b></a> &nbsp;
+        <a href='/contact'><b>Contact</b></a> &nbsp;
+        <hr>        
+        <b><%=title%></b>
+        <br>
+        <table border='1' align='center' cellpadding='10' cellspacing='5'>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <% employees.forEach(record=>
+            { %>
+                    <tr>
+                        <td><%=record.name%></td>
+                        <td><%=record.age%></td>
+                        <td><%=record.city%></td>
+                    </tr>                  
+            <% }) %>
+        </table>
+    </body>
+</html>
