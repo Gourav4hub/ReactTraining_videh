@@ -1,30 +1,43 @@
-// Constructor is a special member function of a class. It is used
-// for initialize the data members when the object is created. 
-var Student = /** @class */ (function () {
-    function Student(roll, name, marks, city) {
-        if (roll === void 0) { roll = undefined; }
-        if (name === void 0) { name = undefined; }
-        if (marks === void 0) { marks = undefined; }
-        if (city === void 0) { city = undefined; }
-        this.roll = roll;
-        this.sname = name;
-        this.marks = marks;
-        this.city = city;
-    }
-    // Define Member Function
-    Student.prototype.show = function () {
-        console.log("\nRoll : ", this.roll);
-        console.log("Name : ", this.sname);
-        console.log("Marks : ", this.marks);
-        console.log("City : ", this.city);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
     };
-    return Student;
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var ABC = /** @class */ (function () {
+    function ABC(a) {
+        if (a === void 0) { a = undefined; }
+        this.a = a;
+    }
+    ABC.prototype.show = function () {
+        console.log("A : ", this.a);
+    };
+    return ABC;
 }());
-var ob1 = new Student(101, "Vikas", 234.45, 'Indore');
-var ob2 = new Student(102, "Gopal", 287.54, 'Delhi');
-var ob3 = new Student(103, "Meena", 256.66, 'Pune');
-var ob4 = new Student();
+var XYZ = /** @class */ (function (_super) {
+    __extends(XYZ, _super);
+    function XYZ(x, a) {
+        if (x === void 0) { x = undefined; }
+        if (a === void 0) { a = undefined; }
+        var _this = _super.call(this, a) // base class constructor
+         || this;
+        _this.x = x;
+        return _this;
+    }
+    XYZ.prototype.show = function () {
+        _super.prototype.show.call(this);
+        console.log("X : ", this.x);
+    };
+    return XYZ;
+}(ABC));
+var ob1 = new XYZ(45, 32);
 ob1.show();
-ob2.show();
-ob3.show();
-ob4.show();

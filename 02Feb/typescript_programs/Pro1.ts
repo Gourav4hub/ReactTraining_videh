@@ -1,8 +1,25 @@
-var num:number = 23;
-var uname:string = "Rajesh";
-var abc:boolean = true;
+// Inheritance
+// Single , Multilevel , Hierarchical
+class ABC
+{
+    public fun1():void
+    {
+        console.log("ABC Fun1 ...... ")
+    }    
+}
+class PQR extends ABC
+{
 
+}
 
-console.log('Hello Students !')
-console.log(num)
-console.log(uname)
+class XYZ extends ABC
+{
+    public hello():void
+    {
+        console.log("XYZ Hello ...... ")
+    }    
+}
+
+var ob1 = new XYZ()
+ob1.hello() // Own Function
+ob1.fun1() // Inherited Function
