@@ -70,4 +70,14 @@ var Student = /** @class */ (function (_super) {
     return Student;
 }(Person));
 var ob1 = new Faculty(101, 23524.33, "Vikas", 34, "9871928319");
-ob1.show();
+var ob2 = new Student(1458, 354.33, "Meena", 28, "7771928319");
+var ob3 = new Person("Gopal", 23, "85928319");
+function fun1(ob) {
+    ob.show();
+}
+function fun2(ob) {
+    ob.show();
+}
+fun2(ob2);
+fun2(ob1);
+fun2(ob3);

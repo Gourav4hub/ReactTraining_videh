@@ -64,8 +64,27 @@ class Student extends Person
     }
 }
 
-var ob1:Person = new Faculty(101,23524.33,"Vikas",34,"9871928319")
-ob1.show()
+var ob1:Faculty = new Faculty(101,23524.33,"Vikas",34,"9871928319")
+var ob2:Student = new Student(1458,354.33,"Meena",28,"7771928319")
+var ob3:Person = new Person("Gopal",23,"85928319")
+
+function fun1(ob:Faculty)
+{
+    ob.show()
+}
+
+function fun2(ob:Person)
+{
+    ob.show()
+}
+
+fun2(ob2)
+fun2(ob1)
+fun2(ob3)
+
+
+
+    
 
 
 
