@@ -1,0 +1,14 @@
+
+
+    1. Student
+            roll , name , age , exam:StudentExam
+            constructor()
+            show()
+        
+    2. StudentExam
+            examtitle , marks (JS Object of 5 subjects marks)
+            constructor()
+            showExam()
+
+      Just create 5 Student Object, Set all the data and Show it all.      
+
